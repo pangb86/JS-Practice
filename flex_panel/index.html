@@ -129,18 +129,22 @@
   </div>
 
   <script>
+    // get node list of all of the panels
     const panels = document.querySelectorAll(".panel");
 
+    // toggles the CSS class open
     function toggleOpen() {
       this.classList.toggle("open");
     }
 
+    // toggles the CSS class open-active
     function toggleActive(e) {
       if (e.propertyName.includes("flex")) {
         this.classList.toggle("open-active");
       }
     }
 
+    // on click toggle the CSS classes on the panel
     panels.forEach(panel => panel.addEventListener("click", toggleOpen));
     panels.forEach(panel => panel.addEventListener("transitionend", toggleActive));
 
