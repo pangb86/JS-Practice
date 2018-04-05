@@ -1,8 +1,9 @@
-.dropdown {
+.menu {
   position: relative;
+  width: 50px;
 }
 
-.dropdown-btn {
+.menu-button {
   background-color: red;
   color: white;
   width: 50px;
@@ -10,7 +11,7 @@
   border: none;
 }
 
-.dropdown-content {
+.menu-content {
   display: none;
   position: absolute;
   background-color: blue;
