@@ -17,3 +17,5 @@ function cycleLight() {
 
 red.style.opacity = 1.0;
 setInterval(cycleLight, 1000);
+setInterval(cycleLight, 1000);
+setInterval(cycleLight, 1000);
