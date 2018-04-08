@@ -31,10 +31,10 @@ async function runLight() {
   while (lightOn) {
     redOn();
     await sleep(2000);
-    yellowOn();
-    await sleep(1000);
     greenOn();
     await sleep(2000);
+    yellowOn();
+    await sleep(1000);
   }
 }
 
