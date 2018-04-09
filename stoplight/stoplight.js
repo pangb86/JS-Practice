@@ -2,6 +2,7 @@ let red = document.querySelector(".red");
 let yellow = document.querySelector(".yellow");
 let green = document.querySelector(".green");
 let lightOn = false;
+let lightInterval;
 let lightButton = document.querySelector("button");
 
 function redOn() {
@@ -38,4 +39,21 @@ async function runLight() {
   }
 }
 
-lightButton.addEventListener("click", runLight);
+function runLight2() {
+  redOn();
+  setTimeout(greenOn, 2000);
+  setTimeout(yellowOn, 4000);
+  setTimeout(redOn, 5000);
+}
+
+function controlLight() {
+  lightOn = !lightOn;
+  if (lightOn) {
+    runLight2();
+    lightInterval = setInterval(runLight2, 7000);
+  } else {
+    clearInterval(lightInterval);
+  }
+}
+
+lightButton.addEventListener("click", controlLight);

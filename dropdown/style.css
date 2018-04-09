@@ -1,5 +1,4 @@
 .menu {
-  position: relative;
   width: 50px;
 }
 
@@ -14,10 +13,11 @@
 
 .menu-content {
   display: none;
-  position: absolute;
-  background-color: blue;
-  color: white;
   width: 50px;
+}
+
+a {
+  display: block;
 }
 
 .show {
