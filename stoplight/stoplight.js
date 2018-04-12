@@ -23,6 +23,7 @@ function greenOn() {
   green.style.opacity = 1.0;
 }
 
+// async/await solution
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
@@ -39,6 +40,7 @@ async function runLight() {
   }
 }
 
+// setTimeout/setInterval solution
 function runLight2() {
   redOn();
   setTimeout(greenOn, 2000);
